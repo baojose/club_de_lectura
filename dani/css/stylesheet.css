@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* RESET */
+.git{
+  background:red;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: 'adobe_garamond_proitalic';
+    src: url('../fonts/agaramondpro-italic-webfont.eot');
+    src: url('../fonts/agaramondpro-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/agaramondpro-italic-webfont.woff') format('woff'),
+         url('../fonts/agaramondpro-italic-webfont.ttf') format('truetype'),
+         url('../fonts/agaramondpro-italic-webfont.svg#adobe_garamond_proitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'adobegaramondproregularRg';
+    src: url('../fonts/agaramondpro-regular-webfont.eot');
+    src: url('../fonts/agaramondpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/agaramondpro-regular-webfont.woff') format('woff'),
+         url('../fonts/agaramondpro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/agaramondpro-regular-webfont.svg#adobegaramondproregularRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+/* PAGE CSS */
+
+#wrapper{
+	margin:0 auto;
+	width:810px;
+	background: url(../img/noise.png);
+	height:900px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	border:14px solid grey;
+}
+
+header{
+	margin:0 auto;
+	width:782px;
+	text-align:center;
+	padding:50px 0 0 0;
+}
+
+header p{
+	margin:0 auto;
+	width:782px;
+	text-align:center;
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	color:#626262;
+	font-size:73px;
+	padding:50px 0 0 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+header p:nth-child(3){
+	margin:0 auto;
+	width:730px;
+	text-align:center;
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	color:#626262;
+	font-size:29px;
+	padding:10px 0 0 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+	background:url(../img/bar2.png) no-repeat 0 65%;
+}
+
+/* SLIDER CLASS */
+
+#wrapper #slider{
+	width:770px;
+	height:100%;
+	
+}

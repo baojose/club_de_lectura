@@ -1,0 +1,653 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* RESET */
+.git{
+  background:red;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	overflow:hidden;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+
+
+/* FONTS */
+
+@font-face {
+    font-family: 'adobe_garamond_proitalic';
+    src: url('../fonts/agaramondpro-italic-webfont.eot');
+    src: url('../fonts/agaramondpro-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/agaramondpro-italic-webfont.woff') format('woff'),
+         url('../fonts/agaramondpro-italic-webfont.ttf') format('truetype'),
+         url('../fonts/agaramondpro-italic-webfont.svg#adobe_garamond_proitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'adobegaramondproregularRg';
+    src: url('../fonts/agaramondpro-regular-webfont.eot');
+    src: url('../fonts/agaramondpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/agaramondpro-regular-webfont.woff') format('woff'),
+         url('../fonts/agaramondpro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/agaramondpro-regular-webfont.svg#adobegaramondproregularRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'adobe_garamond_probold';
+    src: url('../fonts/garamondprobold-webfont.eot');
+    src: url('../fonts/garamondprobold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/garamondprobold-webfont.woff') format('woff'),
+         url('../fonts/garamondprobold-webfont.ttf') format('truetype'),
+         url('../fonts/garamondprobold-webfont.svg#adobe_garamond_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* PAGE CSS */
+
+#wrapper{
+	margin:0 auto;
+	width:780px;
+	background: url(../img/noise.png);
+	float:left;
+}
+
+header{
+	margin:0 auto;
+	width:782px;
+	text-align:center;
+	padding:50px 0 0 0;
+}
+
+header a:hover{
+	transition: all 0.25s ease 0s;
+}
+
+header a:hover{
+	opacity:0.6;
+}
+
+header p{
+	margin:0 auto;
+	width:782px;
+	text-align:center;
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	color:#cb3c50;
+	font-size:73px;
+	padding:50px 0 0 0;
+	text-shadow: 0 0 1px #993a47;
+}
+
+#bar{
+	width:730px;
+	height:1px;
+	background-color:#626262;
+	float:right;
+	margin:30px 10px 0 0;
+	opacity:0.7;
+}
+
+
+/* SLIDER CLASS */
+
+#wrapper #slider{
+	width:770px;
+	float:left;
+}
+
+#book_g{
+	height:395px;
+	width:256px;
+	margin:50px 0 0 147px;
+	float:left;
+	display:block;
+}
+
+#book_content{
+	height:395px;
+	width:356px;
+	margin:0px 0 0 0;
+	padding:0 0 0 0;
+	float:left;
+	display:block;
+}
+
+.ws_prev{
+	background: url(../img/arrow.png) no-repeat;
+    height: 43px;
+	width:43px;
+	margin:150px 0 0 29px;
+    position: absolute;
+	transition: all 0.25s ease 0s;
+}
+
+.ws_next{
+	background: url(../img/arrow.png) no-repeat;
+    height: 43px;
+	width:43px;
+	margin:150px 0 0 710px;
+    position: absolute;
+	transition: all 0.25s ease 0s;
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+}
+
+.ws_next, .ws_prev{
+	cursor:pointer;
+}
+
+.ws_next:hover, .ws_prev:hover{
+	opacity:0.6;
+}
+
+.ws_next:active, .ws_prev:active{
+	border:1px solid transparent;
+}
+
+#book_content p:nth-child(1){
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	color:#000;
+	font-size:23px;
+	width:267px;
+	padding:50px 0 0 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+#book_content p:nth-child(2){
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	color:#626262;
+	width:267px;
+	font-size:18px;
+	padding:15px 0 0 0;
+}
+
+#book_content p:nth-child(3){
+	line-height:18px;
+	font-family:'adobe_garamond_probold', Georgia, "Times New Roman", Times, serif;
+	color:#000;
+	width:267px;
+	font-size:14px;
+	padding:15px 0 0 0;
+}
+
+#book_content p:nth-child(4){
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	color:#626262;
+	font-size:14px;
+	width:267px;
+	padding:15px 0 15px 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+	line-height:18px;
+}
+
+.button{
+	background-color: rgba(0, 0, 0, 0);
+    border: 3px solid #cb3c50;
+    color: #cb3c50;
+	float:left;
+    display: inline-block;
+    margin: 10px 0 10px 0px;
+    padding: 10.5px 16px;
+    text-decoration: none;
+    transition: all 0.25s ease 0s;
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	text-transform: uppercase;
+	font-size:14px;
+}
+
+
+.button:hover{
+    background-color: #000;
+    border: 3px solid #000;
+    color: #FFFFFF;
+}
+
+.button:active{
+}
+
+.button_box1{
+	background-color: rgba(0, 0, 0, 0);
+    border: 3px solid #FFF;
+    color: #FFF;
+	float:left;
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    padding: 8.5px 16px;
+    text-decoration: none;
+    transition: all 0.25s ease 0s;
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	text-transform: uppercase;
+	font-size:14px;
+}
+
+.button_box1:hover{
+    background-color: #FFF;
+    border: 3px solid #FFF;
+    color: #000;
+}
+
+.button_box2{
+	background-color: rgba(0, 0, 0, 0);
+    border: 3px solid #FFF;
+    color: #FFF;
+	float:left;
+    display: inline-block;
+    margin: 10px 0 0 57px;
+    padding: 8.5px 16px;
+    text-decoration: none;
+    transition: all 0.25s ease 0s;
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	text-transform: uppercase;
+	font-size:14px;
+}
+
+.button_box2:hover{
+    background-color: #FFF;
+    border: 3px solid #FFF;
+    color: #000;
+}
+
+.button_box3{
+	background-color: rgba(0, 0, 0, 0);
+    border: 3px solid #FFF;
+    color: #FFF;
+	float:left;
+    display: inline-block;
+    margin: 10px 10px 0 0;
+	float:right;
+    padding: 8.5px 16px;
+    text-decoration: none;
+    transition: all 0.25s ease 0s;
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	text-transform: uppercase;
+	font-size:14px;
+}
+
+.button_box3:hover{
+    background-color: #FFF;
+    border: 3px solid #FFF;
+    color: #000;
+}
+
+#book_content img{
+	margin:20px 0 0 20px;
+	float:left;
+	transition: all 0.25s ease 0s;
+}
+
+#book_content img:hover{
+	opacity:0.6;
+}
+
+#shelf{
+	width:735px;
+	height:25px;
+	background:url(../img/shelf.png) no-repeat;
+	margin: 70px 10px 40px 0;
+	float:right;
+	display:block; 
+}
+
+#shelf ul{
+	width:735px;
+	height:102px;
+	display:block;
+	margin:-90px 0 0 70px;
+}
+
+
+#shelf ul li{
+	float:left;
+	height:102px;
+	width:84px;
+	display:block;
+	transition: all 0.25s ease 0s;
+	cursor:pointer;
+}
+
+#shelf ul li.tooltip:hover{
+	transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	padding:0 0 0 5px;
+}
+
+.tooltip_gris:hover{
+	transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+}
+
+/* BOXES */
+
+#boxes_container{
+	width:750px;
+	display:block;
+	float:right;
+	margin:40px 15px 0 0;
+}
+
+.box_1{
+	height:205px;
+	width:237px;
+	margin: 9px  6px;
+	display:block;
+	float:left;
+	background-color:#4a4a4a;
+	padding-bottom:5px;
+}
+
+.box_2{
+	height:205px;
+	width:237px;
+	margin: 9px  6px;
+	display:block;
+	float:left;
+	background-color:#757575;
+	padding-bottom:5px;
+}
+
+.box_3{
+	height:205px;
+	width:237px;
+	margin: 9px  6px;
+	display:block;
+	float:left;
+	background-color:#4a4a4a;
+	padding-bottom:5px;
+}
+
+.box_1 img, .box_2 img, .box_3 img{
+	margin-top:-9px;
+}
+
+.box_1 img{
+	margin-left:7px;
+}
+
+.box_2 img{
+	margin-left:42px;
+}
+
+.box_3 img{
+	margin-left:80px;
+}
+
+#boxes_container .box_1 p{
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	color:#ffffff;
+	font-size:14px;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+	line-height:14px;
+	padding:10px;
+}
+
+#boxes_container .box_2 p{
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	color:#ffffff;
+	font-size:14px;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+	line-height:14px;
+	padding:10px;
+	text-align:center;
+}
+
+#boxes_container .box_3 p{
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	color:#ffffff;
+	line-height:14px;
+	font-size:14px;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+	padding:10px;
+	text-align:center;
+}
+
+.catalog{
+	height:115px;
+	width:218px;
+	display:block;
+	float:right;
+	margin:15px 0 0 0;
+}
+
+.catalog ul li{
+	height:49px;
+	width:49px;
+	display:block;
+	float:left;
+	padding:2px;
+}
+
+.catalog ul li img{
+	margin:0 0 0 -7px;
+	transition: all 0.25s ease 0s;
+}
+
+.catalog ul li img:hover{
+	border: 1px solid #FFF;
+	opacity:0.6;
+}
+
+.catalog ul li img:active{
+	border:1px solid transparent;
+}
+
+
+/* FOOTER */
+
+#footer{
+	width:782px;
+	height:74px;
+	float:left;
+	margin:50px 0 0 0;
+	background: url(../img/logo_p.png)  no-repeat 25px 25px, #000;
+}
+
+#footer #icons{
+	width:198px;
+	height:46px;
+	float:right;
+	margin:15px 5px 0 0;
+}
+
+#footer #icons li{
+	width:38px;
+	height:38px;
+	float:left;
+	padding:3px;
+	opacity:0.5;
+	transition: all 0.25s ease 0s;
+	cursor:pointer;
+}
+
+#footer #icons li:hover{
+	opacity:1;
+}
+
+#footer #banderas{
+	display:block;
+	width:810px;
+	height:60px;
+	margin:12px 0 0 100px;
+	float:right;              
+}
+
+#footer #banderas_facebook, #banderas_twitter, #banderas_spotify{
+	display:block;
+	margin:0 auto;
+	background:#000;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC; 	              
+}
+
+#footer #banderas_facebook li, #banderas_twitter li, #banderas_spotify li{
+	height:38px;
+	width:30px;
+	float:right;
+	padding:17px 25px 0 0;
+	transition: all 0.25s ease 0s;
+	opacity:0.6;
+	text-align:right;
+}
+
+#footer #banderas_facebook li:hover, #banderas_twitter li:hover, #banderas_spotify li:hover{
+	opacity:1;
+}
+
+#footer #banderas_facebook li:active, #banderas_twitter li:active, #banderas_spotify li:active{
+	margin:1px 1px;
+}
+
+#footer #banderas_facebook{
+	height:60px;
+	margin:0 0 0 28px;     
+}
+
+#footer #banderas_twitter{
+	height:60px;
+	margin:0 0 0 28px;     
+}
+
+#footer #banderas_spotify{
+	height:60px;
+	margin:0 0 0 28px;     
+}
+
+
+/* ACCORDION */
+
+.qaccordion, .qtoggle {
+  margin: 10px auto;
+}
+
+.h {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+  
+.h a {
+  margin:0 auto;
+  width:730px;
+  text-align:center;
+  font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+  color:#626262;
+  font-size:29px;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  background:url(../img/bar2.png) no-repeat 0 50%;
+  transition: all 0.25s ease 0s;  
+}
+
+.h a:hover{
+	opacity:0.6;
+}
+
+.h a:after {
+  content: "+";
+  font-size: 25px;
+  position: absolute;
+  margin: 0px 0 0 -535px;
+}
+
+.h.open {
+  border-bottom: none;
+}
+
+.h.open:after {
+  content: "-";
+}
+.h:last-child a {
+}
+
+.outer {	
+  background: url(../img/noise.png);
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.qaccordion div p{
+	width:510px;
+	margin:0 auto;
+	text-align:left;
+	font-family:'adobegaramondproregularRg', Georgia, "Times New Roman", Times, serif;
+	color:#626262;
+	font-size:16px;
+	line-height:18px;
+	padding:10px 0 0 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
