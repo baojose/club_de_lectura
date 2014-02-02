@@ -41,7 +41,7 @@ function phpfmg_form( $sErr = false ){
             	<label class='form_field'>Nombre</label> <label class='form_required' >*</label> </div>
             	<div class='col_field'>
             	<input type="text" name="field_0"  id="field_0" value="<?php  phpfmg_hsc("field_0", ""); ?>" class='text_box'>
-            	<div id='field_0_tip' class='instruction'></div>
+	<div id='field_0_tip' class='instruction'>Necesitamos tu Nombre</div>
             	</div>
             </li>
 
@@ -49,7 +49,7 @@ function phpfmg_form( $sErr = false ){
             	<label class='form_field'>Apellidos</label> <label class='form_required' >*</label> </div>
             	<div class='col_field'>
             	<input type="text" name="field_1"  id="field_1" value="<?php  phpfmg_hsc("field_1", ""); ?>" class='text_box'>
-            	<div id='field_1_tip' class='instruction'></div>
+	<div id='field_1_tip' class='instruction'>También necesitamos tus apellidos</div>
             	</div>
             </li>
 
@@ -57,15 +57,31 @@ function phpfmg_form( $sErr = false ){
             	<label class='form_field'>eMail</label> <label class='form_required' >*</label> </div>
             	<div class='col_field'>
             	<input type="text" name="field_2"  id="field_2" value="<?php  phpfmg_hsc("field_2", ""); ?>" class='text_box'>
-            	<div id='field_2_tip' class='instruction'></div>
+	<div id='field_2_tip' class='instruction'>Por favor introduce una dirección de correo válida</div>
             	</div>
             </li>
 
             <li class='field_block' id='field_3_div'><div class='col_label'>
+	<label class='form_field'>País</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<?php phpfmg_dropdown( 'field_3', "España|Argentina|Bolivia|Brasil|Chile|Colombia|Costa Rica|Cuba|Ecuador|El Salvador|Guatemala|Haití|Honduras|México|Nicaragua|Panamá|Paraguay|Perú|República Dominicana|Uruguay|Venezuela", true );?>
+	<div id='field_3_tip' class='instruction'>Necesitamos saber cual es tu país de origen</div>
+	</div>
+</li>
+
+<li class='field_block' id='field_4_div'><div class='col_label'>
+	<label class='form_field'>Ciudad, Localidad, Municipio</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<input type="text" name="field_4"  id="field_4" value="<?php  phpfmg_hsc("field_4", "Choice 1"); ?>" class='text_box'>
+	<div id='field_4_tip' class='instruction'>Introduce tu ciudad de origen</div>
+	</div>
+</li>
+
+<li class='field_block' id='field_5_div'><div class='col_label'>
             	<label class='form_field'>Debes aceptar las condiciones</label> <label class='form_required' >*</label> </div>
             	<div class='col_field'>
-            	<?php phpfmg_checkboxes( 'field_3', "Choice 1" );?>
-            	<div id='field_3_tip' class='instruction'></div>
+	<?php phpfmg_checkboxes( 'field_5', "Acepto las condiciones" );?>
+	<div id='field_5_tip' class='instruction'>Debes aceptar las condiciones</div>
             	</div>
             </li>
 
@@ -107,7 +123,7 @@ function phpfmg_form( $sErr = false ){
 
             <!-- [Your confirmation message goes here] -->
             <div id='thank_you_msg' style='display:none;'>
-            Your form has been sent. Thank you!
+Hemos recibido tus datos, bienvenido al Club de Lectura Alfaguara.
             </div>
 
                         
