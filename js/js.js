@@ -15,9 +15,6 @@ var listaOrdenadaLibros_primero = listaOrdenadaLibros[0];
 
 
 
-
-
-
 $(document).ready(function() {
   // console.log("jquery funcionando");
 
@@ -81,7 +78,7 @@ $(document).ready(function() {
   /////////////////////////
   //
   //
-   $("#boxes_container").mouseover(function (){
+   $("#boxes_container, .fbTimelineSection mtm pageAppTab").mouseover(function (){
     $( "#banderas_facebook" ).slideUp( "slow" );
     $( "#banderas_twitter" ).slideUp( "slow" );
     $( "#banderas_spotify" ).slideUp( "slow" );
@@ -170,7 +167,7 @@ function cargarDatosPrincipales(id){
         ///////////     
         // Posiciones en json => X en numero cajas[X]
           $('#caja_roja').html(libros[id].cajas[0].caja_roja.texto+'<a class="button_box1" href="'+libros[id].cajas[0].caja_roja.link_ver_mas+'" style="">Ver más</a>');
-          $('#caja_azul').html(libros[id].cajas[1].caja_azul.texto+'<img style="margin:0 auto 0 auto" src="img/book_c1.jpg" width="87" height="110" /><a class="button_box2" href="'+libros[id].cajas[1].caja_azul.link_ver_mas+'" style="">Comprar</a>');
+          $('#caja_azul').html('<img style="margin:0 auto 0 auto" src='+libros[id].cajas[1].caja_azul.link_comprar+' width="87" height="110" /><a class="button_box2" href="'+libros[id].cajas[1].caja_azul.link_ver_mas+'" style="">Comprar</a>');
           $('#caja_lima').html(libros[id].cajas[2].caja_lima.texto+'<br/><br/><iframe src="https://embed.spotify.com/?uri=spotify:album:6zFmbqx7a4MJEOPKOnOtGV" width="220" height="200" frameborder="0" allowtransparency="true"></iframe>');
           $('#caja_rosa').html(libros[id].cajas[3].caja_rosa.texto+'<a class="button_box2" href="'+libros[id].cajas[3].caja_rosa.link_ver_mas+'" style="">Ver más</a>');
           $('#caja_verde').html(libros[id].cajas[4].caja_verde.texto+'<a class="button_box2" href="'+libros[id].cajas[4].caja_verde.link_ver_mas+'" style="">Ver más</a>');
@@ -244,3 +241,5 @@ function dummy_listaOrdenadaLibros(){  // no se usa
       }
 }
 // console.log(libros);
+
+alert (libro_compra);

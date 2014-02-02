@@ -10,7 +10,7 @@ var libros=
     "link_comprar": "#openModal",
     "cajas":[
       {"caja_roja":{"texto":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "link_ver_mas":"https://www.facebook.com/notes/club-de-lectura-cort%C3%A1zar/biograf%C3%ADa-de-julio-cort%C3%A1zar/394690690666079"}},
-      {"caja_azul":{"texto":"", "link_ver_mas":"http://link_linkver_mas_libro1.com2f4g2"}},
+      {"caja_azul":{"link_comprar":"img/book_c1.jpg", "link_ver_mas":"http://link_linkver_mas_libro1.com2f4g2"}},
       {"caja_lima":{"texto":"Jazzuela. Julio Cortázar y el Jazz"}},
       {"caja_rosa":{"texto":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "link_ver_mas":"http://link_ver_mas.toe"}},
       {"caja_verde":{"texto":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "link_ver_mas":"https://www.facebook.com/notes/club-de-lectura-cort%C3%A1zar/sab%C3%ADas-qu%C3%A9curiosidades-sobre-cort%C3%A1zar/394691097332705"}},
