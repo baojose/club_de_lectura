@@ -7,7 +7,7 @@ var shelf_tamanyo_height_grande = 116;
 
 var libro_landing = 'libro1'; // se podria hacer una funcion q lo buscase del json.js
 var actual_libro = libro_landing;
-var listaOrdenadaLibros = new Array("libro1","libro2","libro3");
+var listaOrdenadaLibros = new Array("libro1");
 // nombre ultimo libro
 var listaOrdenadaLibros_ultimo = listaOrdenadaLibros[listaOrdenadaLibros.length-1];
 // nombre primer libro
@@ -37,7 +37,7 @@ $(document).ready(function() {
   ///////////////////////////////////////////////////////////////////////////////////////////
   // Detectar cual libro del shelf ha sido clicado, cambiar el contenido de slider_content //
   ///////////////////////////////////////////////////////////////////////////////////////////
-  $("#shelf .tooltip img, .tooltip_gris img").click(function() {
+  $("#shelf .tooltip img").click(function() {
 
     // detectar cual id ha sido clicado
     var id = $(this).attr('id');
