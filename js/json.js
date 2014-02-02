@@ -10,10 +10,10 @@ var libros=
     "link_comprar": "#openModal",
     "cajas":[
       {"caja_roja":{"texto":"Nacido accidentalmente en Bruselas en 1914, Julio Cortázar es uno de los escritores argentinos más importantes de todos los tiempos.", "link_ver_mas":"https://www.facebook.com/notes/club-de-lectura-cort%C3%A1zar/biograf%C3%ADa-de-julio-cort%C3%A1zar/394690690666079"}},
-      {"caja_azul":{"link_comprar":"img/book_c1.jpg", "link_ver_mas":"http://link_linkver_mas_libro1.com2f4g2"}},
+      {"caja_azul":{"link_comprar":"img/book_c1.jpg", "link_ver_mas":"http://busqueda.fnac.es/Search/SearchResult.aspx?Search=9788420415932&SCat=2!1&sl=-1.0"}},
       {"caja_lima":{"texto":"Jazzuela. Julio Cortázar y el Jazz"}},
       {"caja_rosa":{"texto":"Cortázar de la A la Z es, en esencia, una iconografía comentada por el autor. Se trata de un libro eminentemente gráfico con dos vertientes interconectadas.", "link_ver_mas":"http://link_ver_mas.toe"}},
-      {"caja_verde":{"texto":"«Ningún otro escritor dio al juego la dignidad literaria que Cortázar, ni hizo del juego un instrumento de creación y exploración artística tan dúctil y provechoso. La obra de Cortázar abrió puertas inéditas.»", "link_ver_mas":"https://www.facebook.com/notes/club-de-lectura-cort%C3%A1zar/sab%C3%ADas-qu%C3%A9curiosidades-sobre-cort%C3%A1zar/394691097332705"}},
+      {"caja_verde":{"texto":"«Ningún otro escritor dio al juego la dignidad literaria que Cortázar, ni hizo del juego un instrumento de creación y exploración artística tan dúctil y provechoso. La obra de Cortázar abrió puertas inéditas.»", "link_ver_mas":"http://www.alfaguara.com/uploads/ficheros/libro/dossier-prensa/201401/dossier-prensa-cortazar-z.pdf"}},
       // 3r32
       {"caja_naranja":{"texto":"3333s3ñakfsdñ", "link_ver_mas":"http://link_ver_mas.toe"}},
 
