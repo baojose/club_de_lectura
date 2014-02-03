@@ -4,23 +4,21 @@
 // 
 
 
-// if ( isset( $_POST['field_0'] ) and isset( $_POST['field_1'] ) and isset( $_POST['field_2'] ) and isset( $_POST['field_3'] ) and isset( $_POST['field_4'] ) and isset( $_POST['field_5'] ) ) {
-if ( isset( $_POST['field_0'] )) {
-require('validaciones.php');
-    
-    // echo "<script>
+// if ( isset( $_POST['field_0'] ) and isset( $_POST['field_1'] ) and isset( $_POST['field_2'] ) and isset( $_POST['field_3'] ) and isset( $_POST['field_4'] ) and isset( $_POST['Checkbox01_field_5'] ) ) {
+// // if ( isset( $_POST['field_0'] )) {
+// $nombre = quitarPyC( $_POST['field_0'] );
+// $apellidos = quitarPyC( $_POST['field_1'] );
+// $email = quitarPyC( $_POST['field_2'] );
+// $pais = quitarPyC( $_POST['field_3'] );
+// $ciudad = quitarPyC( $_POST['field_4'] );
 
-    // alert('filed0(nombre)'".$_POST[field_0].");
+// require('validaciones.php');
+    // if(esNombreValido($nombre) and esApellidoValido($apellidos) and esEmailValido($email) and esPaisValido($pais) and esCiudadValido($ciudad)){
 
-    // </script>";
-    // $nombre = quitarPyC( $_POST['field_0'] );
-    // $apellidos = quitarPyC( $_POST['field_1'] );
-    // $email = quitarPyC( $_POST['field_2'] );
-    // $pais = quitarPyC( $_POST['field_3'] );
-    // $ciudad = quitarPyC( $_POST['field_4'] );
-    // el field 5 es "Acepto condiciones" No valido nada sobre ella
-require('excel.php');
-};
+    //     require('excel.php');
+    // }
+
+// };
 ?>
 
 <?php
