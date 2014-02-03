@@ -66,7 +66,7 @@ if( !class_exists('PHPMailer') && file_exists(PHPFMG_ROOT_DIR.'/phpmailer.php') 
 }; 
 
 
-// define( 'PHPFMG_SIMPLE_CAPTCHA_NAME' , phpfmg_captcha_name() ); // comment this line if you want to disable the simple built-in captcha code
+define( 'PHPFMG_SIMPLE_CAPTCHA_NAME' , phpfmg_captcha_name() ); // comment this line if you want to disable the simple built-in captcha code
 
 define( 'HOST_NAME',getEnv( 'SERVER_NAME' ) );
 define( 'PHP_SELF', getEnv( 'SCRIPT_NAME' ) );
@@ -97,7 +97,7 @@ function phpfmg_thankyou(){
 <!-- [Your confirmation message goes here] -->
 	<br>
 
-    <b>Your form has been sent. Thank you!</b>
+    <b>Hemos recibido tus datos, bienvenido al Club de Lectura Alfaguara.</b>
     <br><br>
 
 <?php
@@ -133,10 +133,12 @@ Gracias por unirte al club de lectura alfaguara
 
 # --- Array of Form Elements ---
 $GLOBALS['form_mail'] = array();
-$GLOBALS['form_mail']['field_0'] = array( "name" => "field_0", "text" => "Nombre",  "type" => "senderfirstname", "instruction" => "", "required" => "Required" ) ;
-$GLOBALS['form_mail']['field_1'] = array( "name" => "field_1", "text" => "Apellidos",  "type" => "senderlastname", "instruction" => "", "required" => "Required" ) ;
-$GLOBALS['form_mail']['field_2'] = array( "name" => "field_2", "text" => "eMail",  "type" => "sender's email", "instruction" => "", "required" => "Required" ) ;
-$GLOBALS['form_mail']['field_3'] = array( "name" => "field_3", "text" => "Debes aceptar las condiciones",  "type" => "checkbox", "instruction" => "", "required" => "Required" ) ;
+$GLOBALS['form_mail']['field_0'] = array( "name" => "field_0", "text" => "Nombre",  "type" => "senderfirstname", "instruction" => "Necesitamos tu Nombre", "required" => "Required" ) ;
+$GLOBALS['form_mail']['field_1'] = array( "name" => "field_1", "text" => "Apellidos",  "type" => "senderlastname", "instruction" => "También necesitamos tus apellidos", "required" => "Required" ) ;
+$GLOBALS['form_mail']['field_2'] = array( "name" => "field_2", "text" => "eMail",  "type" => "sender's email", "instruction" => "Por favor introduce una dirección de correo válida", "required" => "Required" ) ;
+$GLOBALS['form_mail']['field_3'] = array( "name" => "field_3", "text" => "País",  "type" => "select", "instruction" => "Necesitamos saber cual es tu país de origen", "required" => "Required" ) ;
+$GLOBALS['form_mail']['field_4'] = array( "name" => "field_4", "text" => "Ciudad, Localidad, Municipio",  "type" => "text", "instruction" => "Introduce tu ciudad de origen", "required" => "Required" ) ;
+$GLOBALS['form_mail']['field_5'] = array( "name" => "field_5", "text" => "Debes aceptar las condiciones",  "type" => "checkbox", "instruction" => "Debes aceptar las condiciones", "required" => "Required" ) ;
 
 ?>
 <?php
@@ -2022,11 +2024,11 @@ function phpfmg_footer( $formOnly = false ){
 ?>
 
 	<br><br>
-<!-- 	
+	
 	<div style="padding-left:10px; font-size:11px;color:#cccccc;text-decoration:none;">
 		:: <a href="http://phpfmg.sourceforge.net" target="_blank" title="Free Mailform Maker: Create read-to-use Web Forms in a flash" style="color:#cccccc;text-decoration:none;font-weight:bold;">PHP FormMail Generator</a> ::
 	</div>
- -->
+
 <?php
 };// if
 
@@ -3376,7 +3378,7 @@ if (class_exists('PEAR_Error')) {
 
 // The form configuration text file in base64 encoding. You can delete it if you want.
 function phpfmg_formini(){
-    return "ZXNoX2Zvcm1tYWlsX2RvbWFpbm5hbWUJCmVzaF9mb3JtbWFpbF9kZXNjcmlwdGlvbgkKZXNoX2Zvcm1tYWlsX2Zvb3RlcgkKZXNoX2Zvcm1tYWlsX2ZpZWxkX251bXMJNQplc2hfZm9ybW1haWxfcmVjaXBpZW50CWJhb2xsYW50aW5lc0B5YWhvby5lcwplc2hfcGFzc3dvcmQJMTFlN2JhCmVzaF95b3VyX25hbWUJCmVzaF9mb3JtbWFpbF9jYwkKZXNoX2Zvcm1tYWlsX2JjYwkKZXNoX2Zvcm1tYWlsX3N1YmplY3QJQ2x1YiBkZSBMZWN0dXJhIEFsZmFndWFyYQplc2hfbWFpbF90eXBlCWh0bWwKZXNoX2Zvcm1tYWlsX3JlZGlyZWN0CWh0dHA6Ly93d3cubGluay5jb20KZXNoX2Zvcm1tYWlsX3JldHVybl9lbWFpbAkKZXNoX2Zvcm1tYWlsX3JldHVybl9tc2cJR3JhY2lhcyBwb3IgdW5pcnRlIGFsIGNsdWIgZGUgbGVjdHVyYSBhbGZhZ3VhcmEKZXNoX2Zvcm1tYWlsX2NvbmZpcm1fbXNnCVlvdXIgZm9ybSBoYXMgYmVlbiBzZW50LiBUaGFuayB5b3UhCmVzaF9mb3JtbWFpbF9yZXR1cm5fc3ViamVjdAlHcmFjaWFzIHBvciB1bmlydGUgYWwgY2x1YiBkZSBsZWN0dXJhIGFsZmFndWFyYQplc2hfcmV0dXJuX25vX2F0dGFjaG1lbnQJCmVzaF9tYWlsX3RlbXBsYXRlCUdyYWNpYXMgcG9yIHVuaXJ0ZSBhbCBjbHViIGRlIGxlY3R1cmEgYWxmYWd1YXJhCmVzaF9mb3JtbWFpbF9jaGFyc2V0CQplc2hfYWN0aW9uCW1haWxhbmRmaWxlCmVzaF9vbmVfZW50cnkJCmVzaF9vbmVfZW50cnlfbWV0aG9kCQplc2hfb25lX2VudHJ5X21zZwlXZSBmb3VuZCB5b3VyICVFbnRyeSUgaW4gb3VyIHJlY29yZHMuIE11bHRpcGxlIHN1Ym1pc3Npb25zIG5vdCBhY2NlcHRlZC4KZXNoX3RleHRfYWxpZ24JdG9wCmVzaF9zYXZlQXR0YWNobWVudHMJCmVzaF9ub19mcm9tX2hlYWRlcgkKZXNoX3NlY3VyaXR5X2ltYWdlCVkKZXNoX3VzZV9yZWNhcHRjaGEJCnNlbmRtYWlsX2Zyb20JCnNlbmRtYWlsX2Zyb20yCQplc2hfdXNlX3BocG1haWxlcgkKZXNoX3VzZV9zbXRwCQplc2hfc210cF9ob3N0CQplc2hfc210cF91c2VyCQplc2hfc210cF9wYXNzd29yZAkKZXNoX3NtdHBfcG9ydAkKZXNoX3NtdHBfc2VjdXJpdHkJCmVzaF9zbXRwX2RlYnVnX2xldmVsCQplc2hfYmxvY2tfaGFybWZ1bAkKZXNoX2hhcm1mdWxfZXh0cwkucGhwLCAuaHRtbCwgLmNzcywgLmpzLCAuZXhlLCAuY29tLCAuYmF0LCAudmIsIC52YnMsIHNjciwgLmluZiwgLnJlZywgLmxuaywgLnBpZiwgLmFkZSwgLmFkcCwgLmFwcCwgLmJhcywgLmNobSwgLmNtZCwgLmNwbCwgLmNydCwgLmNzaCwgLmZ4cCwgLmhscCwgLmh0YSwgLmlucywgLmlzcCwgLmpzZSwgLmtzaCwgLkxuaywgLm1kYSwgLm1kYiwgLm1kZSwgLm1kdCwgLm1kdywgLm1keiwgLm1zYywgLm1zaSwgLm1zcCwgLm1zdCwgLm9wcywgLnBjZCwgLnByZiwgLnByZywgLnBzdCwgLnNjZiwgLnNjciwgLnNjdCwgLnNoYiwgLnNocywgLnVybCwgLnZiZSwgLndzYywgLndzZiwgLndzaAplc2hfYWxsb3dfZXh0cwkuanBnLCAuZ2lmLCAucG5nLCAuYm1wCmVzaF91cGxvYWRfY29udHJvbAkKZXNoX2FudGlfaG90bGlua2luZwkKZXNoX3JlZmVyZXJzX2FsbG93CQplc2hfcmVmZXJlcnNfZGVuaWVkX21zZwkKZXNoX2ZpbGUybGlua19zaXplCQpOb21icmUJZmllbGRfMAlTZW5kZXJGaXJzdE5hbWUJCVJlcXVpcmVkCQpBcGVsbGlkb3MJZmllbGRfMQlTZW5kZXJMYXN0TmFtZQkJUmVxdWlyZWQJCmVNYWlsCWZpZWxkXzIJU2VuZGVyJ3MgZW1haWwJCVJlcXVpcmVkCQpEZWJlcyBhY2VwdGFyIGxhcyBjb25kaWNpb25lcwlmaWVsZF8zCUNoZWNrQm94CXsib3B0aW9ucyI6IkNob2ljZSAxIiwib3RoZXIiOmZhbHNlfQlSZXF1aXJlZAkK";
+    return "ZXNoX2Zvcm1tYWlsX2RvbWFpbm5hbWUJCmVzaF9mb3JtbWFpbF9kZXNjcmlwdGlvbgkKZXNoX2Zvcm1tYWlsX2Zvb3RlcgkKZXNoX2Zvcm1tYWlsX2ZpZWxkX251bXMJMTAKZXNoX2Zvcm1tYWlsX3JlY2lwaWVudAliYW9sbGFudGluZXNAeWFob28uZXMKZXNoX3Bhc3N3b3JkCQplc2hfeW91cl9uYW1lCQplc2hfZm9ybW1haWxfY2MJCmVzaF9mb3JtbWFpbF9iY2MJCmVzaF9mb3JtbWFpbF9zdWJqZWN0CUNsdWIgZGUgTGVjdHVyYSBBbGZhZ3VhcmEKZXNoX21haWxfdHlwZQlodG1sCmVzaF9mb3JtbWFpbF9yZWRpcmVjdAlodHRwOi8vd3d3LmxpbmsuY29tCmVzaF9mb3JtbWFpbF9yZXR1cm5fZW1haWwJCmVzaF9mb3JtbWFpbF9yZXR1cm5fbXNnCUdyYWNpYXMgcG9yIHVuaXJ0ZSBhbCBjbHViIGRlIGxlY3R1cmEgYWxmYWd1YXJhCmVzaF9mb3JtbWFpbF9jb25maXJtX21zZwlIZW1vcyByZWNpYmlkbyB0dXMgZGF0b3MsIGJpZW52ZW5pZG8gYWwgQ2x1YiBkZSBMZWN0dXJhIEFsZmFndWFyYS4KZXNoX2Zvcm1tYWlsX3JldHVybl9zdWJqZWN0CUdyYWNpYXMgcG9yIHVuaXJ0ZSBhbCBjbHViIGRlIGxlY3R1cmEgYWxmYWd1YXJhCmVzaF9yZXR1cm5fbm9fYXR0YWNobWVudAkKZXNoX21haWxfdGVtcGxhdGUJR3JhY2lhcyBwb3IgdW5pcnRlIGFsIGNsdWIgZGUgbGVjdHVyYSBhbGZhZ3VhcmEKZXNoX2Zvcm1tYWlsX2NoYXJzZXQJCmVzaF9hY3Rpb24JbWFpbGFuZGZpbGUKZXNoX29uZV9lbnRyeQkKZXNoX29uZV9lbnRyeV9tZXRob2QJCmVzaF9vbmVfZW50cnlfbXNnCVdlIGZvdW5kIHlvdXIgJUVudHJ5JSBpbiBvdXIgcmVjb3Jkcy4gTXVsdGlwbGUgc3VibWlzc2lvbnMgbm90IGFjY2VwdGVkLgplc2hfdGV4dF9hbGlnbgl0b3AKZXNoX3NhdmVBdHRhY2htZW50cwkKZXNoX25vX2Zyb21faGVhZGVyCQplc2hfc2VjdXJpdHlfaW1hZ2UJWQplc2hfdXNlX3JlY2FwdGNoYQkKc2VuZG1haWxfZnJvbQkKc2VuZG1haWxfZnJvbTIJCmVzaF91c2VfcGhwbWFpbGVyCQplc2hfdXNlX3NtdHAJCmVzaF9zbXRwX2hvc3QJCmVzaF9zbXRwX3VzZXIJCmVzaF9zbXRwX3Bhc3N3b3JkCQplc2hfc210cF9wb3J0CQplc2hfc210cF9zZWN1cml0eQkKZXNoX3NtdHBfZGVidWdfbGV2ZWwJCmVzaF9ibG9ja19oYXJtZnVsCQplc2hfaGFybWZ1bF9leHRzCS5waHAsIC5odG1sLCAuY3NzLCAuanMsIC5leGUsIC5jb20sIC5iYXQsIC52YiwgLnZicywgc2NyLCAuaW5mLCAucmVnLCAubG5rLCAucGlmLCAuYWRlLCAuYWRwLCAuYXBwLCAuYmFzLCAuY2htLCAuY21kLCAuY3BsLCAuY3J0LCAuY3NoLCAuZnhwLCAuaGxwLCAuaHRhLCAuaW5zLCAuaXNwLCAuanNlLCAua3NoLCAuTG5rLCAubWRhLCAubWRiLCAubWRlLCAubWR0LCAubWR3LCAubWR6LCAubXNjLCAubXNpLCAubXNwLCAubXN0LCAub3BzLCAucGNkLCAucHJmLCAucHJnLCAucHN0LCAuc2NmLCAuc2NyLCAuc2N0LCAuc2hiLCAuc2hzLCAudXJsLCAudmJlLCAud3NjLCAud3NmLCAud3NoCmVzaF9hbGxvd19leHRzCS5qcGcsIC5naWYsIC5wbmcsIC5ibXAKZXNoX3VwbG9hZF9jb250cm9sCQplc2hfYW50aV9ob3RsaW5raW5nCQplc2hfcmVmZXJlcnNfYWxsb3cJCmVzaF9yZWZlcmVyc19kZW5pZWRfbXNnCQplc2hfZmlsZTJsaW5rX3NpemUJCk5vbWJyZQlmaWVsZF8wCVNlbmRlckZpcnN0TmFtZQkJUmVxdWlyZWQJTmVjZXNpdGFtb3MgdHUgTm9tYnJlCkFwZWxsaWRvcwlmaWVsZF8xCVNlbmRlckxhc3ROYW1lCQlSZXF1aXJlZAlUYW1iacOpbiBuZWNlc2l0YW1vcyB0dXMgYXBlbGxpZG9zCmVNYWlsCWZpZWxkXzIJU2VuZGVyJ3MgZW1haWwJCVJlcXVpcmVkCVBvciBmYXZvciBpbnRyb2R1Y2UgdW5hIGRpcmVjY2nDs24gZGUgY29ycmVvIHbDoWxpZGEKUGHDrXMJZmllbGRfMwlTZWxlY3QJeyJvcHRpb25zIjoiRXNwYcOxYXxBcmdlbnRpbmF8Qm9saXZpYXxCcmFzaWx8Q2hpbGV8Q29sb21iaWF8Q29zdGEgUmljYXxDdWJhfEVjdWFkb3J8RWwgU2FsdmFkb3J8R3VhdGVtYWxhfEhhaXTDrXxIb25kdXJhc3xNw6l4aWNvfE5pY2FyYWd1YXxQYW5hbcOhfFBhcmFndWF5fFBlcsO6fFJlcMO6YmxpY2EgRG9taW5pY2FuYXxVcnVndWF5fFZlbmV6dWVsYSIsIm90aGVyIjp0cnVlfQlSZXF1aXJlZAlOZWNlc2l0YW1vcyBzYWJlciBjdWFsIGVzIHR1IHBhw61zIGRlIG9yaWdlbgpDaXVkYWQsIExvY2FsaWRhZCwgTXVuaWNpcGlvCWZpZWxkXzQJVGV4dAl7Im9wdGlvbnMiOiJDaG9pY2UgMSIsIm90aGVyIjpmYWxzZX0JUmVxdWlyZWQJSW50cm9kdWNlIHR1IGNpdWRhZCBkZSBvcmlnZW4KRGViZXMgYWNlcHRhciBsYXMgY29uZGljaW9uZXMJZmllbGRfNQlDaGVja0JveAl7Im9wdGlvbnMiOiJBY2VwdG8gbGFzIGNvbmRpY2lvbmVzIiwib3RoZXIiOmZhbHNlfQlSZXF1aXJlZAlEZWJlcyBhY2VwdGFyIGxhcyBjb25kaWNpb25lcwo=";
 }
 
 ?>
