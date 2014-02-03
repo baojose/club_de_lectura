@@ -2,14 +2,23 @@
 // metido por dan
 // para validar los datos y asi poder saber si deben ser grabados en .csv (o no)
 // 
-if ( isset( $_POST['field_0'] ) and isset( $_POST['field_1'] ) and isset( $_POST['field_2'] ) and isset( $_POST['field_3'] ) and isset( $_POST['field_4'] ) ) {
+
+
+// if ( isset( $_POST['field_0'] ) and isset( $_POST['field_1'] ) and isset( $_POST['field_2'] ) and isset( $_POST['field_3'] ) and isset( $_POST['field_4'] ) and isset( $_POST['field_5'] ) ) {
+if ( isset( $_POST['field_0'] )) {
 require('validaciones.php');
     
-    $nombre = quitarPyC( $_POST['field_0'] );
-    $apellidos = quitarPyC( $_POST['field_1'] );
-    $email = quitarPyC( $_POST['field_2'] );
-    $pais = quitarPyC( $_POST['field_3'] );
-    $ciudad = quitarPyC( $_POST['field_4'] );
+    // echo "<script>
+
+    // alert('filed0(nombre)'".$_POST[field_0].");
+
+    // </script>";
+    // $nombre = quitarPyC( $_POST['field_0'] );
+    // $apellidos = quitarPyC( $_POST['field_1'] );
+    // $email = quitarPyC( $_POST['field_2'] );
+    // $pais = quitarPyC( $_POST['field_3'] );
+    // $ciudad = quitarPyC( $_POST['field_4'] );
+    // el field 5 es "Acepto condiciones" No valido nada sobre ella
 require('excel.php');
 };
 ?>

@@ -3,15 +3,14 @@
 // echo "<script>confirm('ejecutando js escrito desde excel.php');</script>"; // funciona!
 $debug=0;
 $path_csv = "./"; // path de los dos csvs que se generan
-	$nombre = quitarPyC( $_POST['field_0'] );
-	$apellidos = quitarPyC( $_POST['field_1'] );
-	$email = quitarPyC( $_POST['field_2'] );
-	$pais = quitarPyC( $_POST['field_3'] );
-	$ciudad = quitarPyC( $_POST['field_4'] );
+
 	// echo "<script>confirm('pasas aunque POST no exista');</script>"; // funciona!
 	// ABRIR EL FICHERO
 	// abro fichero para concatenar
-	$text=$nombre.";".$apellidos.";".$email.";".$pais.";".$ciudad;
+	
+	// $text=$nombre.";".$apellidos.";".$email.";".$pais.";".$ciudad;
+	$text=" debug nombre=[".$_POST[field_0]."] debug apellidos=[".$_POST[field_1]."] debug email=[".$_POST[field_2]."] debug pais=[".$_POST[field_3]."] debug ciudad=[".$_POST[field_4]."] debug Checked=[".$_POST[Checkbox01_field_5]."]"; // DEBUG
+	
 	$nombre_output =  "club_de_lectura.csv";
 
 
