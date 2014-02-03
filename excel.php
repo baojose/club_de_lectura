@@ -1,7 +1,7 @@
 <?php
 // decide si escribe en csv
 // echo "<script>confirm('ejecutando js escrito desde excel.php');</script>"; // funciona!
-$debug=1;
+$debug=0;
 $path_csv = "./"; // path de los dos csvs que se generan
 
 	// echo "<script>confirm('pasas aunque POST no exista');</script>"; // funciona!

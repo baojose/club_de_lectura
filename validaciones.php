@@ -1,7 +1,10 @@
 <?php
 // VALIDACIONES
 function esVacio( $algo ) {
-	return preg_match( "", $algo );
+	if($algo == ""){
+		return true;
+	}
+	return false;
 	// return preg_match( "/^\s+$/", $algo );  // no pongo esta porque  tengo que mimetizar lo que hace la libreria
 }
 
@@ -19,33 +22,33 @@ function quitarPyC( $con ) {
 
 function esNombreValido($valor){
 	if(esVacio($valor)){
-		return true;
+		return false;
 	}
-	return false;
+		return true;
 }
 function esApellidoValido($valor){
 	if(esVacio($valor)){
-		return true;
+		return false;
 	}
-	return false;
+		return true;
 }
 function esEmailValido($valor){
 	if (filter_var($valor, FILTER_VALIDATE_EMAIL)) {
 		return true;
 	}
-	return false;
+		return false;
 }
 function esPaisValido($valor){
 	if(esVacio($valor)){
-		return true;
+		return false;
 	}
-	return false;
+		return true;
 }
 function esCiudadValido($valor){
 	if(esVacio($valor)){
-		return true;
+		return false;
 	}
-	return false;
+		return true;
 }
 
 
