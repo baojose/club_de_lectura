@@ -1,21 +1,4 @@
 <?php
-function esNombreValido(){
-	return true;
-}
-function esApellidoValido(){
-	return true;
-}
-function esCorreoValido(){
-	return true;
-}
-function esPaisValido(){
-	return true;
-}
-function esCiudadValido(){
-	return true;
-}
-
-
 // VALIDACIONES
 function esVacio( $algo ) {
 	return preg_match( "/^\s+$/", $algo );
@@ -29,6 +12,42 @@ function quitarPyC( $con ) {
 	$sin3 = preg_replace( "/;/", "", $sin2 );
 	return $sin3;
 }
+
+
+
+
+function esNombreValido($valor){
+	if(esVacio($valor)){
+		return true;
+	}
+	return false;
+}
+function esApellidoValido($valor){
+	if(esVacio($valor)){
+		return true;
+	}
+	return false;
+}
+function esEmailValido($valor){
+	if (filter_var($valor, FILTER_VALIDATE_EMAIL)) {
+		return true;
+	}
+	return false;
+}
+function esPaisValido($valor){
+	if(esVacio($valor)){
+		return true;
+	}
+	return false;
+}
+function esCiudadValido($valor){
+	if(esVacio($valor)){
+		return true;
+	}
+	return false;
+}
+
+
 
 
 ?>
