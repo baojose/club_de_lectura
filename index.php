@@ -128,8 +128,7 @@ Hemos recibido tus datos, bienvenido al Club de Lectura Alfaguara.
 
                         
                         
-    </div>
-</div>
+
 
 
 
