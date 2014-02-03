@@ -19,16 +19,14 @@
 }
 
 .modalDialog > div {
-	width: 400px;
+	width: 450px;
 	position: relative;
-	margin: 10% auto;
+	margin: 300px auto;
 	padding: 5px 20px 13px 20px;
 	border-radius: 10px;
-	background: #fff;
-	background: -moz-linear-gradient(#fff, #999);
-	background: -webkit-linear-gradient(#fff, #999);
-	background: -o-linear-gradient(#fff, #999);
+	background:#f4f4f4;
 }
+
 .close {
 	background: #606061;
 	color: #FFFFFF;
@@ -53,101 +51,6 @@
 
 
 
-ol.phpfmg_form{
-    list-style-type:none;
-    padding:0px;
-    margin:0px;
-}
-
-ol.phpfmg_form input, ol.phpfmg_form textarea, ol.phpfmg_form select{
-    border: 1px solid #ccc;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-}
-
-ol.phpfmg_form li{
-    margin-bottom:5px;
-    clear:both;
-    display:block;
-    overflow:hidden;
-	width: 100%
-}
-
-
-.form_field, .form_required{
-    font-weight : bold;
-}
-
-.form_required{
-    color:red;
-    margin-right:8px;
-}
-
-.field_block_over{
-}
-
-.form_submit_block{
-    padding-top: 3px;
-}
-
-.text_box, .text_area, .text_select {
-    width:300px;
-}
-
-.text_area{
-    height:80px;
-}
-
-.form_error_title{
-    font-weight: bold;
-    color: red;
-}
-
-.form_error{
-    background-color: #F4F6E5;
-    border: 1px dashed #ff0000;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.form_error_highlight{
-    background-color: #F4F6E5;
-    border-bottom: 1px dashed #ff0000;
-}
-
-div.instruction_error{
-    color: red;
-    font-weight:bold;
-}
-
-hr.sectionbreak{
-    height:1px;
-    color: #ccc;
-}
-
-#one_entry_msg{
-    background-color: #F4F6E5;
-    border: 1px dashed #ff0000;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-
-#frmFormMailContainer input[type="submit"]{
-    padding: 10px 25px; 
-    font-weight: bold;
-    margin-bottom: 10px;
-    background-color: #FAFBFC;
-}
-
-#frmFormMailContainer input[type="submit"]:hover{
-    background-color: #E4F0F8;
-}
-
-
-
-
 /*   FORM  */
 
 ol.phpfmg_form{
@@ -157,10 +60,22 @@ ol.phpfmg_form{
 }
 
 ol.phpfmg_form input, ol.phpfmg_form textarea, ol.phpfmg_form select{
-    border: 1px solid #ccc;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+	background-color: #FFFFFF;
+    border: 1px solid #C8C8C8;
+    margin: 0 0 0 0;
+    min-height: 36px;	
+	border-radius: 3px;
+    display: inline-block;
+    max-width: 300px;
+	margin:5px 5px 10px 0;
+    min-width: 50px;
+    padding: 3px;
+    vertical-align: middle;
+	float:left;
+	transition: all 0.25s ease 0s;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	
 }
 
 ol.phpfmg_form li{
@@ -174,6 +89,10 @@ ol.phpfmg_form li{
 
 .form_field, .form_required{
     font-weight : bold;
+	font-size:16px;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:10px 0 10px 0;
+	color:#cb3c50;
 }
 
 .form_required{
@@ -213,6 +132,15 @@ ol.phpfmg_form li{
     border-bottom: 1px dashed #ff0000;
 }
 
+.instruction{
+	font-size:10px;
+	padding:0 0 0 0;
+	width:100px;
+	float:left;
+	width:100px;
+	
+}
+
 div.instruction_error{
     color: red;
     font-weight:bold;
@@ -240,5 +168,16 @@ hr.sectionbreak{
 
 #frmFormMailContainer input[type="submit"]:hover{
     background-color: #E4F0F8;
+}
+
+.col_label{
+	margin:5px 0 0 0;
+}
+
+.form_choice_text{
+	float:left;
+	width:100px;
+	display:block;
+	margin:10px 0 0 0;
 }
 
