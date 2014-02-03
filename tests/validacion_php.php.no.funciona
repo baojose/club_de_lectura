@@ -1,0 +1,21 @@
+<?php
+
+require('../validacion_php/form_validations.php');
+require_once('simpletest/autorun.php');
+
+$form_validations = new form_validations;
+
+
+$a_mails_ok = Array("fkjds@gmail.com","alsdfasd@sakdf.com");
+
+
+class CanAddUp extends UnitTestCase {
+    function validateEmail() {
+    	$dummy_mail_ok = "sltjaa@ltjl.com";
+    	$response_mail = $form_validations->check_email("sltjaaltjl.com");
+        $this->assertTrue($response_mail, true);
+    }
+}
+
+
+?>
