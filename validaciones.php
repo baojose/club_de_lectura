@@ -1,7 +1,8 @@
 <?php
 // VALIDACIONES
 function esVacio( $algo ) {
-	return preg_match( "/^\s+$/", $algo );
+	return preg_match( "", $algo );
+	// return preg_match( "/^\s+$/", $algo );  // no pongo esta porque  tengo que mimetizar lo que hace la libreria
 }
 
 // quitar los puntos y comas

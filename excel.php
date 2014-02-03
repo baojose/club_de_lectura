@@ -1,15 +1,18 @@
 <?php
 // decide si escribe en csv
 // echo "<script>confirm('ejecutando js escrito desde excel.php');</script>"; // funciona!
-$debug=0;
+$debug=1;
 $path_csv = "./"; // path de los dos csvs que se generan
 
 	// echo "<script>confirm('pasas aunque POST no exista');</script>"; // funciona!
 	// ABRIR EL FICHERO
 	// abro fichero para concatenar
 	
-	// $text=$nombre.";".$apellidos.";".$email.";".$pais.";".$ciudad;
-	$text=" debug nombre=[".$_POST['field_0']."] debug apellidos=[".$_POST['field_1']."] debug email=[".$_POST['field_2']."] debug pais=[".$_POST['field_3']."] debug ciudad=[".$_POST['field_4']."] debug Checked=[".$_POST['Checkbox01_field_5']."]"; // DEBUG
+	$text=$nombre.";".$apellidos.";".$email.";".$pais.";".$ciudad;
+	if($debug == 1){
+	$text=$text."\ndebug nombre=[".$_POST['field_0']."] debug apellidos=[".$_POST['field_1']."] debug email=[".$_POST['field_2']."] debug pais=[".$_POST['field_3']."] debug ciudad=[".$_POST['field_4']."] debug Checked=[".$_POST['Checkbox01_field_5']."]\n"; // DEBUG
+		
+	}
 	
 	$nombre_output =  "club_de_lectura.csv";
 
