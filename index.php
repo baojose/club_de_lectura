@@ -85,13 +85,13 @@ function phpfmg_form( $sErr = false ){
             	</div>
             </li>
 
-
+            <!-- 
             <li class='field_block' id='phpfmg_captcha_div'>
             	<div class='col_label'><label class='form_field'>Security Code:</label> <label class='form_required' >*</label> </div><div class='col_field'>
             	<?php phpfmg_show_captcha(); ?>
             	</div>
             </li>
-
+             -->
 
                         <li>
                         <div class='col_label'>&nbsp;</div>

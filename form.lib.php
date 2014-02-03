@@ -66,7 +66,7 @@ if( !class_exists('PHPMailer') && file_exists(PHPFMG_ROOT_DIR.'/phpmailer.php') 
 }; 
 
 
-define( 'PHPFMG_SIMPLE_CAPTCHA_NAME' , phpfmg_captcha_name() ); // comment this line if you want to disable the simple built-in captcha code
+// define( 'PHPFMG_SIMPLE_CAPTCHA_NAME' , phpfmg_captcha_name() ); // comment this line if you want to disable the simple built-in captcha code
 
 define( 'HOST_NAME',getEnv( 'SERVER_NAME' ) );
 define( 'PHP_SELF', getEnv( 'SCRIPT_NAME' ) );
