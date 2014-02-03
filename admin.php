@@ -225,9 +225,9 @@ function phpfmg_admin_footer(){
 
 </div>
 
-<div style="color:#cccccc;text-decoration:none;padding:18px;font-weight:bold;">
+<!-- <div style="color:#cccccc;text-decoration:none;padding:18px;font-weight:bold;">
 	:: <a href="http://phpfmg.sourceforge.net" target="_blank" title="Free Mailform Maker: Create read-to-use Web Forms in a flash. Including validating form with CAPTCHA security image, send html email with attachments, send auto response email copy, log email traffics, save and download form data in Excel. " style="color:#cccccc;font-weight:bold;text-decoration:none;">PHP FormMail Generator</a> ::
-</div>
+</div> -->
 
 </body>
 </html>

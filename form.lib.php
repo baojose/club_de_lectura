@@ -2025,9 +2025,9 @@ function phpfmg_footer( $formOnly = false ){
 
 	<br><br>
 	
-	<div style="padding-left:10px; font-size:11px;color:#cccccc;text-decoration:none;">
+<!-- 	<div style="padding-left:10px; font-size:11px;color:#cccccc;text-decoration:none;">
 		:: <a href="http://phpfmg.sourceforge.net" target="_blank" title="Free Mailform Maker: Create read-to-use Web Forms in a flash" style="color:#cccccc;text-decoration:none;font-weight:bold;">PHP FormMail Generator</a> ::
-	</div>
+	</div> -->
 
 <?php
 };// if
