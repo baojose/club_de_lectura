@@ -1,3 +1,6 @@
+<!--modal Dialog    (la cajita con formulario). Tambien tiene el css del formulario -->
+<link rel="stylesheet" type="text/css" href="css/modaldialog.css" />
+
 <?php
 // php anyadido por dan
 include("wrapper.html");
@@ -27,6 +30,9 @@ function phpfmg_form( $sErr = false ){
         <a href="#close" title="Close" class="close">X</a>
 
             <div id='frmFormMailContainer'>
+            
+            <p class="encabezado">Club de Lectura Alfaguara</p>
+            <p class="encabezado2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
             <form name="frmFormMail" id="frmFormMail" target="submitToFrame" action='<?php echo PHPFMG_ADMIN_URL . '' ; ?>' method='post' enctype='multipart/form-data' onsubmit='return fmgHandler.onSubmit(this);'>
 
@@ -72,7 +78,7 @@ function phpfmg_form( $sErr = false ){
 <li class='field_block' id='field_4_div'><div class='col_label'>
 	<label class='form_field'>Ciudad, Localidad, Municipio</label> <label class='form_required' >*</label> </div>
 	<div class='col_field'>
-	<input type="text" name="field_4"  id="field_4" value="<?php  phpfmg_hsc("field_4", "Choice 1"); ?>" class='text_box'>
+	<input type="text" name="field_4"  id="field_4" value="<?php  phpfmg_hsc("field_4", ""); ?>" class='text_box'>
 	<div id='field_4_tip' class='instruction'>Introduce tu ciudad de origen</div>
 	</div>
 </li>
@@ -98,10 +104,10 @@ function phpfmg_form( $sErr = false ){
                         <div class='form_submit_block col_field'>
             	
             				
-                            <input type='submit' value='Submit' class='form_button'>
+                            <input type='submit' value='Enviar' class='form_button'>
 
             				<div id='err_required' class="form_error" style='display:none;'>
-            				    <label class='form_error_title'>Please check the required fields</label>
+            				    <label class='form_error_title'>Ya falta menos para entrar al Club de Lectura Alfaguara, completa los datos que faltan.</label>
             				</div>
             				
 
