@@ -10,7 +10,7 @@ define( 'PAYPAL_ID' , '' ); // Put donation ID here to disable the bottom backli
 // define( 'PHPFMG_TO' , 'baollantines@yahoo.es' );
 define( 'PHPFMG_TO' , 'corneliusinlove@gmail.com,baollantines@yahoo.es' );
 // define( 'PHPFMG_REDIRECT', 'https://www.webuzz.es/aplicaciones/skeetching/dani/index.php' );  // DIRECCION FINA DESAROLLO
-define( 'PHPFMG_REDIRECT', 'https://www.facebook.com/groups/clubdelecturacortazar' );  // DIRECCION FINAL PRODUCCION
+ define( 'PHPFMG_REDIRECT', 'https://www.facebook.com/groups/clubdelecturacortazar' );  // DIRECCION FINAL PRODUCCION
 
 define( 'PHPFMG_ID' , '20140129-13b6' ); 
 define( 'PHPFMG_ROOT_DIR' , dirname(__FILE__) );
