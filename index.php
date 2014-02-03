@@ -152,6 +152,7 @@ function phpfmg_form_css(){
 <?php 
 if( !$formOnly ){
     echo"
+    /*
 body{
     margin-left: 18px;
     margin-top: 18px;
@@ -167,6 +168,7 @@ body{
 select, option{
     font-size:13px;
 }
+*/
 ";
 }; // if
 ?>
