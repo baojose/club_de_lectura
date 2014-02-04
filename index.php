@@ -32,7 +32,7 @@ function phpfmg_form( $sErr = false ){
             <div id='frmFormMailContainer'>
             
             <p class="encabezado">Club de Lectura Alfaguara</p>
-            <p class="encabezado2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="encabezado2">Únete a nuestro club de lectura y comparte opiniones y vivencias con otros lectores del resto del mundo. Además tendrás acceso a videos, imágenes y contenidos adicionales exclusivos de cada novela.</p>
 
             <form name="frmFormMail" id="frmFormMail" target="submitToFrame" action='<?php echo PHPFMG_ADMIN_URL . '' ; ?>' method='post' enctype='multipart/form-data' onsubmit='return fmgHandler.onSubmit(this);'>
 

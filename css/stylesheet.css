@@ -113,7 +113,7 @@ a:active {
 
 #wrapper{
 	margin:0 auto;
-	width:780px;
+	width:810px;
 	background: url(../img/noise.png);
 	float:left;
 }
@@ -479,8 +479,8 @@ header p{
 }
 
 /* HACK IMÁGENES AUTOR */
-.box_2 img:nth-child(1){
-	margin:35px 10px 0 0;
+.box_2 img:nth-child(2){
+	margin:10px 25px -10px 0;
 }
 
 .box_3 img{
